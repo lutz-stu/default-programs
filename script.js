@@ -21,12 +21,13 @@ function displayFileContent() {
 
         reader.readAsText(file);
     } else {
-        alert('Bitte eine Datei auswählen.');
+        alert('Kein Datei ausgewählt.');
     }
 }
 
 function showPopup() {
     document.getElementById('overlay').style.display = 'block';
+    document.getElementById('newFilename').value = file.name;
 }
 
 function hidePopup() {
