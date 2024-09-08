@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Texteditor</title>
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+
+        <a href="index.html">
+            <img class="home-button" src="/img/home-button.png" alt="Zurück zur Startseite">
+        </a>
+
+        <div class="controls">
+            <input type="file" id="fileInput"/>
+            <button onclick="displayFileContent()">Datei anzeigen</button>
+        </div>
+
+        <button class="downloadFile" onclick="showPopup()">Datei herunterladen</button>
+
+        <textarea class="fileContent" id="fileContent"></textarea>
+
+        <div id="overlay" class="overlay">
+            <div id="popup" class="popup">
+                <span onclick="hidePopup()" class="close-popup">&times;</span>
+                <label for="newFilename">Neuer Dateiname:</label>
+                <input type="text" id="newFilename" />
+                <br>
+                <button onclick="downloadFile()">Herunterladen</button>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

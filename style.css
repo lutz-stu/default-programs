@@ -1,0 +1,122 @@
+body {
+    background-color: rgb(242, 238, 234);
+}
+
+.home-button {
+    position: absolute; 
+    width: 40px; 
+    height: auto; 
+    padding: 5px;
+}
+
+.header {
+    text-align: center;
+    margin: 30px;
+    font-family: "MuseoModerno", sans-serif;
+    font-size: 50px;
+    font-style: bold;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.program {
+    width: 300px; /* Ändern Sie die Breite nach Bedarf */
+    max-width: 300px;
+    height: 300px; /* Ändern Sie die Höhe nach Bedarf */
+    margin: 5px; /* Ändern Sie den Abstand zwischen den Buttons nach Bedarf */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none; /* Entfernen Sie die Standard-Rand- und Rahmenstil */
+    background: none;
+    cursor: pointer; /* Zeigen Sie einen Zeigercursor an, wenn auf den Button gezeigt wird */
+}
+
+.program img {
+    width: 100%; /* Ändern Sie die Breite des Bildes nach Bedarf */
+    height: auto; /* Passen Sie die Höhe automatisch an */
+}
+
+@media screen and (min-width: 768px) {
+    .program {
+        width: calc(
+            33.33% - 10px
+        ); /* Berechnen Sie die Breite basierend auf dem Rasterlayout für Desktop */
+    }
+}
+
+.controls {
+    background-color: #ffffff;
+    border: 5px solid rgb(0, 71, 250);
+    border-radius: 10px; /* Radius für die Ecken der Border hinzugefügt */
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    max-width: fit-content; /* Beispiel: Setzen Sie hier Ihre gewünschte Breite */
+    margin: 0 auto; /* Horizontal zentrieren */
+}
+
+.controls,
+.controls input,
+.controls input[type="file"]::-webkit-file-upload-button,
+.controls button,
+.downloadFile {
+    font-family: "MuseoModerno", sans-serif;
+    font-size: 15px;
+    font-style: normal;
+}
+
+.downloadFile {
+    position: fixed;
+    top: 20px; /* Abstand zum oberen Bildschirmrand */
+    right: 20px; /* Abstand zum rechten Bildschirmrand */
+    padding: 5px;
+    border: 3px solid rgb(0, 71, 250);
+    border-radius: 5px; /* Radius für die Ecken der Border hinzugefügt */
+    cursor: pointer;
+}
+
+.fileContent {
+    border: 5px solid rgb(106, 106, 106);
+    border-radius: 10px; /* Radius für die Ecken der Border hinzugefügt */
+    overflow-y: auto; /* Vertikalen Scrollbalken anzeigen, wenn der Inhalt überläuft */
+    overflow-x: auto;
+    margin: 10px;
+    padding: 10px;
+    width: calc(100% - 46px);
+    resize: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+.popup {
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 300px;
+    padding: 20px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close-popup {
+    float: right;
+    cursor: pointer;
+}
