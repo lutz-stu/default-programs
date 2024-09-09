@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #221f2f;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    background-color: #ed2ff0;
+    width: 120px;
+    height: 120px;
+    left: 75%;
+    top: 20%;
+    filter: blur(90px);
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    background-color: #22a8cd;
+    width: 120px;
+    height: 120px;
+    left: 10%;
+    top: 80%;
+    filter: blur(90px);
+}
+
+.box {
+    position: absolute;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.44);
+    min-width: 500px;
+    max-width: 90%;
+    width: 50%;
+    padding: 2em;
+    border-radius: 0.5em;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.4px);
+    -webkit-backdrop-filter: blur(7.4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center; /* Zentriert den Text und den Inhalt in der Mitte des Containers */
+}
+
+.header {
+    font-size: 2.2em;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    gap: 1.2em;
+}
+
+a.button-link {
+    text-decoration: none; /* Entfernt die Unterstreichung des Links */
+    width: 100%; /* Fügt die Breite für den Link hinzu */
+}
+
+.button {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    color: #fff;
+    width: 100%; /* Behält die feste Breite bei */
+    margin: 1.5em auto 0 auto;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    border-color: #0d47a1;
+    color: #0d47a1;
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        width: 80%;
+    }
+}
+
+
+.hover-buttons {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+
+.hover-button {
+    position: relative;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.44);
+    width: 30%;
+    border-radius: 0.5em;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.4px);
+    -webkit-backdrop-filter: blur(7.4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center; /* Zentriert den Text und den Inhalt in der Mitte des Containers */
+    transition: transform 0.3s; /* Füge eine sanfte Übergangsanimation hinzu */
+    margin: 1.5em auto 0 auto;
+    overflow: hidden; /* Verhindert, dass das Bild über den Container hinausragt */
+    height: 150px;
+}
+
+.hover-button:hover {
+    transform: scale(
+        1.1
+    ); /* Vergrößere das Element auf das 1,1-fache bei Hover */
+}
+
+.hover-img {
+    max-height: 80%;
+    object-fit: cover; /* Das Bild wird so skaliert, dass es den Container abdeckt, ohne das Seitenverhältnis zu verzerren */
+    transition: filter 0.3s; /* Füge eine sanfte Übergangsanimation für den Filter hinzu */
+    margin: 10px;
+    padding-bottom: 0;
+}
+
+.hover-button:hover .hover-img {
+    filter: blur(
+        5px
+    ); /* Füge den Unschärfe-Effekt hinzu, wenn über das Bild gehovert wird */
+}
+
+.hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 1.5em;
+    opacity: 0; /* Mache den Text standardmäßig unsichtbar */
+    transition: opacity 0.3s; /* Füge eine sanfte Übergangsanimation für die Opazität hinzu */
+}
+
+.hover-button:hover .hover-text {
+    opacity: 1; /* Zeige den Text an, wenn über das Bild gehovert wird */
+}
