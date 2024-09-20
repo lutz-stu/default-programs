@@ -1,34 +1,86 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Standardprogramme</title>
+        <title>Default Programs</title>
+        <link rel="icon" type="image/x-icon" href="/img/favicon.png">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <!-- Bulma Framework -->
         <link
-            href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
         />
-
-        <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <div class="header">Standardprogramme</div>
+        <section class="section">
+            <div class="container">
+                <h1 class="title">Default Programs</h1>
 
-        <div class="button-container">
-            <a href="texteditor.html" class="program">
-                <img src="/img/text.png" alt="Button 1" />
-            </a>
-            <a class="program">
-                <img src="bild2.jpg" alt="Button 2" />
-            </a>
-            <a class="program">
-                <img src="bild3.jpg" alt="Button 3" />
-            </a>
-        </div>
+                <div class="columns is-multiline">
 
-        <br><br><a href="credits.html">Credits</a>
+                    <!-- Service 1 -->
+                    <div class="column is-one-third">
+                        <a href="text-editor.html">
+                            <div class="card">
+                                <div class="card-image">
+                                    <figure class="image is-1by1">
+                                        <img src="/img/text-editor.png" alt="Texteditor" />
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <div class="media-content">
+                                        <p class="title is-4">Text Editor</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="column is-one-third">
+                        <a href="">
+                            <div class="card">
+                                <div class="card-image">
+                                    <figure class="image is-1by1">
+                                        <img
+                                            src="/img/photo-viewer.png"
+                                            alt="Photo Viewer"
+                                        />
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <div class="media-content">
+                                        <p class="title is-4">Photo Viewer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="column is-one-third">
+                        <a href="">
+                            <div class="card">
+                                <div class="card-image">
+                                    <figure class="image is-1by1">
+                                        <img
+                                            src="/img/calculator.png"
+                                            alt="Calculator"
+                                        />
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <div class="media-content">
+                                        <p class="title is-4">Calculator</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
     </body>
 </html>

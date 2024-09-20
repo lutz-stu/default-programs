@@ -1,0 +1,9 @@
+{
+    "name": "Default Programs",
+    "short_name": "Df Prgms",
+    "theme_color": "#1c8adb",
+    "background_color": "#ffffff",
+    "display": "fullscreen",
+    "scope": "/",
+    "start_url": "/index.html"
+}
