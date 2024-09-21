@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- PWA Manifest -->
+        <link rel="manifest" href="manifest.json" />
+        <!-- ios support -->
+        <link rel="apple-touch-icon" href="img/icons/icon-72x72.png" />
+        <link rel="apple-touch-icon" href="img/icons/icon-96x96.png" />
+        <link rel="apple-touch-icon" href="img/icons/icon-128x128.png" />
+        <link rel="apple-touch-icon" href="img/icons/icon-144x144.png" />
+        <link rel="apple-touch-icon" href="img/icons/icon-152x152.png" />
+        <link rel="apple-touch-icon" href="img/icons/icon-192x192.png" />
+        <link rel="apple-touch-icon" href="img/icons/icon-384x384.png" />
+        <link rel="apple-touch-icon" href="img/icons/icon-512x512.png" />
+        <meta name="apple-mobile-web-app-status-bar" content="#1c8adb" />
+        <meta name="theme-color" content="#1c8adb" />
+
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Default Programs</title>
@@ -15,7 +29,7 @@
     <body>
         <section class="section">
             <div class="container">
-                <h1 class="title">Default Programs</h1>
+                <h1 class="title is-1">Default Programs</h1>
 
                 <div class="columns is-multiline">
 
@@ -82,5 +96,15 @@
                 </div>
             </div>
         </section>
+        <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", function() {
+                navigator.serviceWorker
+                .register("/serviceWorker.js")
+                .then(res => console.log("service worker registered"))
+                .catch(err => console.log("service worker not registered", err))
+            })
+        }
+        </script>
     </body>
 </html>
