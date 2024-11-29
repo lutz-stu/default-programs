@@ -1,7 +1,7 @@
 {
     "name": "Default Programs",
     "short_name": "Def Programs",
-    "theme_color": "#00d1b2",
+    "theme_color": "#ffffff",
     "background_color": "#ffffff",
     "display": "standalone",
     "scope": "/",
